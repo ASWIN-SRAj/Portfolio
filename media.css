@@ -1,0 +1,295 @@
+/* ========== Base Reset ========== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ========== Header ========== */
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #000;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+/* Toggle Menu */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* ========== Projects Section ========== */
+#pro-con {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 50px;
+  justify-content: center; /* ✅ Centers project cards */
+}
+
+.project-card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+/* ========== Service Section ========== */
+#web img,
+.design-slide {
+  width: 30%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.design-slide:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Medium Screens (Tablets) ========== */
+@media (max-width: 991px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header a {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info img {
+    width: 50%;
+    padding: 30px 0;
+    margin: 0 auto;
+  }
+
+  .info h1 { font-size: 50px; }
+  .info h2 { font-size: 30px; }
+  .tspan { font-size: 18px; margin-left: 0; }
+
+  #detail,
+  .about,
+  #certificates {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .foot-det {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .foot-det img {
+    width: 80px;
+    height: auto;
+  }
+
+  .download-resume {
+    padding: 20px;
+  }
+
+  .skills-container img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-card {
+    width: 350px;
+  }
+}
+
+/* ========== Small Screens (Mobiles) ========== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #000;
+    padding: 15px 0;
+  }
+
+  .header.show {
+    display: flex;
+  }
+
+  #pro-con {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    justify-content: center; /* ✅ Ensure centering in single-column */
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  #web img,
+  .design-slide {
+    width: 80%;
+    max-width: 100%;
+  }
+
+  .info h1 { font-size: 36px; }
+  .info h2 { font-size: 24px; }
+
+  .header a {
+    font-size: 20px;
+  }
+
+  #b1 {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .skill-box {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .modal-content {
+    width: 95%;
+    height: auto;
+    max-height: 90%;
+  }
+
+  .arrow {
+    font-size: 20px;
+    padding: 4px 8px;
+  }
+
+  #scrollToTop {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+
+  .resume-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+/* Ultra-small mobile screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .project-card {
+    
+    width: 10%;
+     
+    padding: 0px;
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+
+  .project-card button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .project-card img{
+    width: 50%;
+  }
+  #contacts{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 10px;
+    margin-left: 0;
+  }
+  .download-resume{
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 549px) {
+  .project-card {
+    width: 10%;
+    padding: 15px;
+    font-size: 14px;
+    margin-left: 1px;  
+    padding: 0px;
+    }
+
+  .project-card h3 {
+    font-size: 14px;
+  }
+
+  .project-card p {
+    font-size: 10px;
+  }
+  .project-card img{
+    width: 80%;
+  }
+
+  .project-card button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  #pro-con {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+
+.foot-det{
+  font-size: 15px;
+  text-align: center;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0;
+}
+.download-resume{
+  justify-content: center;
+  align-items: center;
+}
+}
